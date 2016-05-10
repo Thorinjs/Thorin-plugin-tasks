@@ -16,6 +16,7 @@ module.exports = function(thorin, opt, pluginName) {
     persist: 'config/.task_dump'
   }, opt);
   const pluginObj = {},
+    async = thorin.util.async,
     REGISTERED_TASKS = {},
     TaskEntry = initTaskEntry(thorin, opt);
 
@@ -33,6 +34,29 @@ module.exports = function(thorin, opt, pluginName) {
       taskObj.start();
     });
     return taskObj;
+  }
+
+  /*
+  * Returns a specific task by its name.
+  * */
+  pluginObj.getTask = function(taskName) {
+    return REGISTERED_TASKS[taskName] || null;
+  }
+
+  /*
+  * Stops all tasks.
+  * */
+  pluginObj.stopTasks = function StopAllTasks(fn) {
+    let calls = [];
+    Object.keys(REGISTERED_TASKS).forEach((name) => {
+      calls.push(pluginObj.stopTask.bind(pluginObj, name));
+    });
+    async.series(calls, (e) => fn && fn(e));
+  }
+  /* Stops a single task. */
+  pluginObj.stopTask = function StopTask(name, fn) {
+    if(typeof REGISTERED_TASKS[name] === 'undefined') return fn && fn();
+    REGISTERED_TASKS[name].stop(fn);
   }
 
   /*
