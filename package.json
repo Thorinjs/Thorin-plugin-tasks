@@ -1,0 +1,18 @@
+{
+  "name": "thorin-plugin-tasks",
+  "author": "Stiudeo",
+  "version": "1.0.1",
+  "dependencies": {
+  },
+  "description": "Thorin.js tasks plugin",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stiudeo/Thorin-plugin-tasks"
+  },
+  "homepage": "http://thorinjs.com",
+  "bugs": {
+    "url": "https://github.com/Stiudeo/Thorin-plugin-tasks/issues"
+  }
+}
