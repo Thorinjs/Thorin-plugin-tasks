@@ -31,7 +31,8 @@ module.exports = function(thorin, opt, pluginName) {
     let taskObj = new TaskEntry(taskName, taskConfig);
     REGISTERED_TASKS[taskName] = taskObj;
     process.nextTick(() => {
-      taskObj.start();
+      // at this point, check any previous timers.
+      taskObj.start(undefined, true);
     });
     return taskObj;
   }
