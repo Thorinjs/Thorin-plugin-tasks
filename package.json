@@ -1,8 +1,9 @@
 {
   "name": "thorin-plugin-tasks",
   "author": "Stiudeo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "dependencies": {
+    "moment": "2.14.1"
   },
   "description": "Thorin.js tasks plugin",
   "main": "index.js",
