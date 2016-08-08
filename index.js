@@ -5,7 +5,7 @@ const path = require('path'),
 /**
  * Created by Adrian on 08-Apr-16.
  *
- * The less plugin is a utility plugin that will watch the given less input for changes and compile it into css.
+ * The tasks component is used to schedule various actions that will be executed at specific points in time.
  */
 module.exports = function(thorin, opt, pluginName) {
   opt = thorin.util.extend({
