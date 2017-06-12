@@ -1,7 +1,7 @@
 {
   "name": "thorin-plugin-tasks",
   "author": "Stiudeo",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "dependencies": {
     "moment": "2.14.1"
   },
