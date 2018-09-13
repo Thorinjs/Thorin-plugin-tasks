@@ -1,9 +1,9 @@
 {
   "name": "thorin-plugin-tasks",
-  "author": "Stiudeo",
-  "version": "1.0.9",
+  "author": "UNLOQ Systems LTD",
+  "version": "1.0.10",
   "dependencies": {
-    "moment": "2.14.1"
+    "moment": "2.19.3"
   },
   "description": "Thorin.js tasks plugin",
   "main": "index.js",
